@@ -8,7 +8,7 @@ const Header = () => {
     <header className={style.header}>
       <Container>
         <div className={style['top-nav']}>
-          <h1>Millen Mark's <br/>Project Gallery</h1>
+          <h1>Millen Mark's Project Gallery</h1>
         </div>
       </Container>
     </header>
