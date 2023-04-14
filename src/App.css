@@ -29,5 +29,5 @@ ul li a {
 }
 
 .active {
-  border-bottom: 2px solid #0087ca;
+  border-bottom: 2px solid var(--slight-dark-blue-color);
 }

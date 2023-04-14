@@ -10,7 +10,10 @@ const FrontmentorPage = () => {
       <ProjectWrapper>
         {
           frontend.map((item, index) => (
-            <Card/>
+            <Card 
+              key={index} 
+              imgURL={item.imgURL} 
+              name={item.name}/>
           ))
         }
       </ProjectWrapper>

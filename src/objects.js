@@ -1,14 +1,14 @@
 export const frontend = [
   {
-    imgURL: './assets/frontend/qr-code.jpg',
+    imgURL: 'https://drive.google.com/uc?export=view&id=1dQEXs72uIiiJqqQTpBL0B09M7MPpLlZL',
     name: 'QR code component'
   },
   {
-    imgURL: './assets/frontend/qr-code.jpg',
+    imgURL: 'https://drive.google.com/uc?export=view&id=1dQEXs72uIiiJqqQTpBL0B09M7MPpLlZL',
     name: 'QR code component'
   },
   {
-    imgURL: './assets/frontend/qr-code.jpg',
+    imgURL: 'https://drive.google.com/uc?export=view&id=1dQEXs72uIiiJqqQTpBL0B09M7MPpLlZL',
     name: 'QR code component'
   },
 ]

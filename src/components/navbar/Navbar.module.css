@@ -33,7 +33,7 @@
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #0087ca;
+  background-color: var(--slight-dark-blue-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
