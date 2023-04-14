@@ -8,12 +8,16 @@ const Navbar = () => {
   const menus = [
     {
       linkTo: '/',
-      linkName: 'Frontend Mentor'
+      linkName: 'FrontendMentor'
     },
     {
       linkTo: '/personal',
-      linkName: 'Personal Projects'
-    }
+      linkName: 'Personal'
+    },
+    {
+      linkTo: '/bootcamp',
+      linkName: 'Bootcamp'
+    },
 
   ]
   return (

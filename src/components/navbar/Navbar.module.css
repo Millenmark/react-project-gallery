@@ -7,11 +7,16 @@
   z-index: 99;
 }
 
+.nav {
+  overflow: scroll;
+}
+
 .nav ul{
   display: flex;
 }
 
 .nav ul > li {
+  display: inline-block;
   padding: 1rem;
   border-left: 1px solid var(--slight-color);
 }
