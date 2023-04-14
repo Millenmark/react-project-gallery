@@ -37,8 +37,8 @@ const Card = ({imgURL, name, tags, link}) => {
             }
           </ul>
         </div>
-        <Button link={link}>Visit Live Demo</Button>
       </div>
+      <Button link={link} className={style.button}>Visit Live Demo</Button>
     </div>
   )
 }

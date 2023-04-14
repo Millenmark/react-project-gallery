@@ -1,11 +1,17 @@
 .card {
-  width: min(100%, 380px);
+  position: relative;
+  /* width: min(100%, 380px); */
+  max-width: 380px;
   aspect-ratio: 1/1.3;
   background: white;
   border: 1.5px solid var(--slight-color);
   flex: 0 1 380px;
   border-radius: 10px;
   overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card-info {
@@ -39,4 +45,9 @@
 .tags ul{
   display: flex;
   gap: 1rem;
+}
+
+.button {
+  border-radius: 0;
+  width: 100%;
 }
