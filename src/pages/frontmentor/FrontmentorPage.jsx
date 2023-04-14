@@ -13,7 +13,9 @@ const FrontmentorPage = () => {
             <Card 
               key={index} 
               imgURL={item.imgURL} 
-              name={item.name}/>
+              name={item.name} 
+              tags={item.tags}
+            />
           ))
         }
       </ProjectWrapper>
