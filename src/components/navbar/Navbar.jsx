@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <div className={style.border}>
       <Container>
-        <nav>
+        <nav className={style.nav}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Frontend Mentor</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/github">Github</Link>
             </li>
           </ul>
         </nav>

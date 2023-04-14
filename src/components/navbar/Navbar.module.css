@@ -2,3 +2,12 @@
   border: solid var(--slight-color);
   border-width: 1px 0;
 }
+
+.nav ul{
+  display: flex;
+}
+
+.nav ul > li {
+  padding: 1rem;
+  border-left: 1px solid var(--slight-color);
+}

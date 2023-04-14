@@ -4,15 +4,15 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
 import { DefaultLayout } from './layout'
-import { HomePage, AboutPage } from './pages'
+import { FrontmentorPage, GithubPage } from './pages'
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<DefaultLayout/>}>
-          <Route index element={<HomePage/>}/>
-          <Route path="/about" element={<AboutPage/>}/>
+          <Route index element={<FrontmentorPage/>}/>
+          <Route path="/github" element={<GithubPage/>}/>
         </Route>
       </Routes>
     </div>

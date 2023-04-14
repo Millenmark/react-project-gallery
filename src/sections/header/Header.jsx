@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Header.module.css'
 
 import { Container } from '../../ui'
-import Navbar from '../navbar/Navbar'
+import { Navbar } from '../../components'
 
 const Header = () => {
   return (
