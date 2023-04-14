@@ -15,6 +15,7 @@ const FrontmentorPage = () => {
               imgURL={item.imgURL} 
               name={item.name} 
               tags={item.tags}
+              link={item.link}
             />
           ))
         }

@@ -1,7 +1,9 @@
 import React from 'react'
 import style from './Card.module.css'
 
-const Card = ({imgURL, name, tags}) => {
+import { Button } from '../../ui'
+
+const Card = ({imgURL, name, tags, link}) => {
   return (
     <div className={style.card}>
       <div className={style['image-div']} style={{backgroundImage: `url(${imgURL})`}}>
@@ -35,6 +37,7 @@ const Card = ({imgURL, name, tags}) => {
             }
           </ul>
         </div>
+        <Button link={link}>Visit Live Demo</Button>
       </div>
     </div>
   )
