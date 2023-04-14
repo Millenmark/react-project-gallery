@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Card.module.css'
 
-const Card = ({imgURL, name, description, tags}) => {
+const Card = ({imgURL, name, tags}) => {
   return (
     <div className={style.card}>
       <div className={style['image-div']} style={{backgroundImage: `url(${imgURL})`}}>
@@ -12,13 +12,29 @@ const Card = ({imgURL, name, description, tags}) => {
         <div className={style.tags}>
           <ul>
             {
-              tags.map((tag, index) => (
-                <li key={index} style={{color:`${tag.color}`}}>{tag.name}</li>
-              ))
+              tags.map((tag, index) => { 
+                let color = '';
+
+                switch (tag) {
+                  case 'html':
+                    color = '#f16529'
+                    break
+                  case 'css':
+                    color = '#0277bd'
+                    break
+                  case 'javascript':
+                    color = '#e8d21c'
+                    break
+                  default:
+                    color = 'black'
+                    break
+                }
+
+                return (<li key={index} style={{color}}>{tag}</li>)
+              })
             }
           </ul>
         </div>
-        <p>{description}</p>
       </div>
     </div>
   )
