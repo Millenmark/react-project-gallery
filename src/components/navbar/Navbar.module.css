@@ -1,0 +1,4 @@
+.border {
+  border: solid var(--slight-color);
+  border-width: 1px 0;
+}

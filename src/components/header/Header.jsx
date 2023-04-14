@@ -1,24 +1,19 @@
 import React from 'react'
-
-import { Link } from 'react-router-dom'
+import style from './Header.module.css'
 
 import { Container } from '../../ui'
+import Navbar from '../navbar/Navbar'
 
 const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <Container>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className={style['top-nav']}>
+          <h1>Millen Mark's Project Gallery</h1>
+        </div>
       </Container>
+
+      <Navbar/>
     </header>
   )
 }
