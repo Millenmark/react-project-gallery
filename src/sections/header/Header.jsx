@@ -2,7 +2,6 @@ import React from 'react'
 import style from './Header.module.css'
 
 import { Container } from '../../ui'
-import { Navbar } from '../../components'
 
 const Header = () => {
   return (
@@ -12,8 +11,6 @@ const Header = () => {
           <h1>Millen Mark's Project Gallery</h1>
         </div>
       </Container>
-
-      <Navbar/>
     </header>
   )
 }

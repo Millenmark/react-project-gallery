@@ -7,7 +7,7 @@ import { frontend } from '../../objects'
 const FrontmentorPage = () => {
   return (
     <Container>
-      <ProjectWrapper className={style.cards}>
+      <ProjectWrapper>
         {
           frontend.map((item, index) => (
             <Card/>
