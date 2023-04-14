@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout/>}>
           <Route index element={<FrontmentorPage/>}/>
-          <Route path="/github" element={<GithubPage/>}/>
+          <Route path="/personal" element={<GithubPage/>}/>
         </Route>
       </Routes>
     </div>

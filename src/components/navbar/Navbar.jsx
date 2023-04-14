@@ -1,21 +1,33 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Container } from '../../ui'
 import style from './Navbar.module.css'
 
 const Navbar = () => {
+  const menus = [
+    {
+      linkTo: '/',
+      linkName: 'Frontend Mentor'
+    },
+    {
+      linkTo: '/personal',
+      linkName: 'Personal Projects'
+    }
+
+  ]
   return (
     <div className={style.border}>
       <Container>
         <nav className={style.nav}>
           <ul>
-            <li>
-              <Link to="/">Frontend Mentor</Link>
-            </li>
-            <li>
-              <Link to="/github">Github</Link>
-            </li>
+            {
+              menus.map((menu, index) => (
+                <li key={index}>
+                  <NavLink to={menu.linkTo} className={`${style.hover}`}>{menu.linkName}</NavLink>
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </Container>
