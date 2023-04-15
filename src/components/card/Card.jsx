@@ -25,7 +25,7 @@ const Card = ({imgURL, name, tags, link}) => {
                     color = '#0277bd'
                     break
                   case 'javascript':
-                    color = '#e8d21c'
+                    color = '#e2cd0f'
                     break
                   default:
                     color = 'black'
