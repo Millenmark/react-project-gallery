@@ -3,7 +3,8 @@
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   padding-top: 2.5rem;
   background-color: rgba(0, 0, 0, 0.1);
-  background-image: url('../../assets/svg/bg_image.svg');
+  /* background-image: url('../../assets/svg/bg_image.svg'); */
+  background-image: url('https://tiftyleb.sirv.com/backgrounds/bg_image.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
