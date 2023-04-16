@@ -4,7 +4,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
 import { DefaultLayout } from './layout'
-import { FrontmentorPage, GithubPage, BootcampPage } from './pages'
+import { FrontmentorPage, GithubPage, NotFound } from './pages'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<DefaultLayout/>}>
           <Route index element={<FrontmentorPage/>}/>
           <Route path="/personal" element={<GithubPage/>}/>
-          <Route path="/bootcamp" element={<BootcampPage/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
     </div>

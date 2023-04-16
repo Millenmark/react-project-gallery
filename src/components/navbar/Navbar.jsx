@@ -13,11 +13,7 @@ const Navbar = () => {
     {
       linkTo: '/personal',
       linkName: 'Personal'
-    },
-    {
-      linkTo: '/bootcamp',
-      linkName: 'Bootcamp'
-    },
+    }
 
   ]
   return (
