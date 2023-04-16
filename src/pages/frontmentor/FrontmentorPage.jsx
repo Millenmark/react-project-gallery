@@ -6,10 +6,11 @@ import { frontend } from '../../objects'
 
 const FrontmentorPage = () => {
   return (
-    <Container>
+    <Container className={style.frontend}>
       <ProjectWrapper>
-        {
-          frontend.map((item, index) => (
+        { frontend.length === 0 
+          ? (<p>Nothing to show here at the moment</p>)
+          : frontend.map((item, index) => (
             <Card 
               key={index} 
               imgURL={item.imgURL} 
