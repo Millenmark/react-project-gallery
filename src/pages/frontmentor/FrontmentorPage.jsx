@@ -21,7 +21,7 @@ const FrontmentorPage = () => {
     <Container className={style.frontend}>
       <ProjectWrapper>
         { data.length === 0 
-          ? (<p>Nothing to show here at the moment</p>)
+          ? (<p>Nothing to show hered at the moment</p>)
           : data.map((item, index) => (
             <Card 
               key={index} 
