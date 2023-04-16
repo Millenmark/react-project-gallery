@@ -29,6 +29,15 @@ const Card = ({imgURL, name, tags, link}) => {
                   case 'javascript':
                     color = '#f7df1e'
                     break
+                  case 'laravel':
+                    color = '#fd7765'
+                    break
+                  case 'mysql':
+                    color = '#64ccf1'
+                    break
+                  case 'react':
+                    color = '#00d8ff'
+                    break
                   default:
                     color = 'black'
                     break
