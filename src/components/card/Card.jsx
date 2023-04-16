@@ -21,13 +21,13 @@ const Card = ({imgURL, name, tags, link}) => {
 
                 switch (tag) {
                   case 'html':
-                    color = '#f16529'
+                    color = '#ff753a'
                     break
                   case 'css':
-                    color = '#0277bd'
+                    color = '#4bb4f1'
                     break
                   case 'javascript':
-                    color = '#e2cd0f'
+                    color = '#f7df1e'
                     break
                   default:
                     color = 'black'
