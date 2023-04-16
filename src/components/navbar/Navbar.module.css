@@ -1,5 +1,5 @@
 .border {
-  border: solid var(--slight-color);
+  border: solid var(--border-color);
   border-width: 1px 0;
   background: var(--background-color);
   position: sticky;
@@ -18,11 +18,11 @@
 .nav ul > li {
   display: inline-block;
   padding: 1rem;
-  border-left: 1px solid var(--slight-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .nav ul > li:last-child {
-  border-right: 1px solid var(--slight-color);
+  border-right: 1px solid var(--border-color);
 }
 
 

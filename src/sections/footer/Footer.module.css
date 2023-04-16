@@ -1,5 +1,5 @@
 .footer {
-  background: white;
+  background: var(--card-bg);
   padding-block: 2.5rem;
   text-align: center;
 }

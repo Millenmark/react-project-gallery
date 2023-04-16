@@ -10,11 +10,14 @@
   border: none;
   border-radius: 10px;
 
-  background-color: var(--slight-dark-blue-color);
+  background-color: var(--button-color);
   color: white;
-  padding: 1em 2em
+  padding: 1em 2em;
+
+  transition: all .25s ease;
 }
 
 .button:hover {
-  background-color: rgb(20, 92, 173);
+  transform: scale(1.1);
+  background-color: #36a8ff;
 }
