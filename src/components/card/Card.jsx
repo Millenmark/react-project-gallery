@@ -4,11 +4,11 @@ import style from './Card.module.css'
 import { Button } from '../../ui'
 
 const Card = ({imgURL, name, tags, link}) => {
-  const imageLink = `https://drive.google.com/uc?export=view&id=${imgURL}`
+  // const imageLink = `https://drive.google.com/uc?export=view&id=${imgURL}`
 
   return (
     <div className={style.card}>
-      <div className={style['image-div']} style={{backgroundImage: `url(${imageLink})`}}>
+      <div className={style['image-div']} style={{backgroundImage: `url(${imgURL})`}}>
         {/* <img src={imgURL} alt="" /> */}
       </div>
       <div className={style['card-info']}>
