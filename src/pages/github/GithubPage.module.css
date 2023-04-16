@@ -1,3 +1,7 @@
 .personal {
   min-height: 100vh;
 }
+
+.personal p {
+  text-align: center;
+}
