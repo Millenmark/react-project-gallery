@@ -16,7 +16,7 @@ const Card = ({imgURL, name, tags, link}) => {
         <div className={style.tags}>
           <ul>
             {
-              tags.map((tag, index) => { 
+              tags.split(",").map((tag, index) => { 
                 let color = '';
 
                 switch (tag) {
