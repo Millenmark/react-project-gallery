@@ -12,3 +12,7 @@ export const frontend = [
     tags: ['html', 'css']
   },
 ]
+
+export const personal = []
+
+export const bootcamp = []
