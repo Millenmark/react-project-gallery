@@ -7,12 +7,16 @@ const FrontmentorPage = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(`${import.meta.env.VITE_DATABASE_URL}/api/v1/${import.meta.env.VITE_DATABASE_KEY}?sort_by=id&sort_order=desc`);
-      const json = await response.json();
-      setData(json);
-    }
-
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_LOCALDATA}`);
+        const data = await response.json();
+        const sortedData = data.frontend.sort((a, b) => b.id - a.id);
+        setData(sortedData);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     fetchData();
   }, []);
 

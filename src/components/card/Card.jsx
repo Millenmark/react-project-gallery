@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './Card.module.css'
+import htmlIcon from '../../assets/svg/techicons/html.svg'
 
 import { Button } from '../../ui'
 
@@ -10,6 +11,10 @@ const Card = ({imgURL, name, tags, link}) => {
     <div className={style.card}>
       <div className={style['image-div']} style={{backgroundImage: `url(${imgURL})`}}>
         {/* <img src={imgURL} alt="" /> */}
+        <div>
+          <img src={htmlIcon} alt="" />
+          <img src={htmlIcon} alt="" />
+        </div>
       </div>
       <div className={style['card-info']}>
         <h2>{name}</h2>
