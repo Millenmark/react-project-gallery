@@ -9,7 +9,7 @@ const FrontmentorPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_LOCALDATA}`);
+        const response = await fetch("/data.json");
         const data = await response.json();
         const sortedData = data.frontend.sort((a, b) => b.id - a.id);
         setData(sortedData);
