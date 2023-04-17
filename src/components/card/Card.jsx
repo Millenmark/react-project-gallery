@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Card.module.css'
-import htmlIcon from '../../assets/svg/techicons/html.svg'
+import { htmlIcon, cssIcon, jsIcon, reactIcon, laravelIcon, mysqlIcon } from '../../assets/svg/techicons'
 
 import { Button } from '../../ui'
 
@@ -12,47 +12,41 @@ const Card = ({imgURL, name, tags, link}) => {
       <div className={style['image-div']} style={{backgroundImage: `url(${imgURL})`}}>
         {/* <img src={imgURL} alt="" /> */}
         <div>
-          <img src={htmlIcon} alt="" />
-          <img src={htmlIcon} alt="" />
+        {
+          tags.split(",").map((tag, index) => { 
+            let src = '';
+
+            switch (tag) {
+              case 'html':
+                src = htmlIcon
+                break
+              case 'css':
+                src = cssIcon
+                break
+              case 'javascript':
+                src = jsIcon
+                break
+              case 'react':
+                src = reactIcon
+                break
+              case 'laravel':
+                src = laravelIcon
+                break
+              case 'mysql':
+                src = mysqlIcon
+                break
+              default:
+                src = '#'
+                break
+            }
+
+            return (<img key={index} src={src}/>)
+          })
+        } 
         </div>
       </div>
       <div className={style['card-info']}>
         <h2>{name}</h2>
-        <div className={style.tags}>
-          <ul>
-            {
-              tags.split(",").map((tag, index) => { 
-                let color = '';
-
-                switch (tag) {
-                  case 'html':
-                    color = '#ff753a'
-                    break
-                  case 'css':
-                    color = '#4bb4f1'
-                    break
-                  case 'javascript':
-                    color = '#f7df1e'
-                    break
-                  case 'laravel':
-                    color = '#fd7765'
-                    break
-                  case 'mysql':
-                    color = '#64ccf1'
-                    break
-                  case 'react':
-                    color = '#00d8ff'
-                    break
-                  default:
-                    color = 'black'
-                    break
-                }
-
-                return (<li key={index} style={{color}}>{tag}</li>)
-              })
-            }
-          </ul>
-        </div>
       </div>
       <Button link={link} className={style.button}>Visit Live Demo</Button>
     </div>

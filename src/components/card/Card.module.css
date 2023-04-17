@@ -38,12 +38,14 @@
 
 .image-div > * {
   position: absolute;
-  top: 20%;
+  top: 48%;
+  transform: translateY(-52%);
   left: 11%;
 
   display: flex;
   gap: .9rem;
   flex-direction: column;
+  /* background-color: red; */
 }
 
 .image-div > * img {

@@ -1,0 +1,6 @@
+export {default as htmlIcon} from './html.svg'
+export {default as cssIcon} from './css.svg'
+export {default as jsIcon} from './js.svg'
+export {default as reactIcon} from './react.svg'
+export {default as laravelIcon} from './laravel.svg'
+export {default as mysqlIcon} from './mysql.svg'
