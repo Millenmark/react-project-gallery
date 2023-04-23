@@ -57,6 +57,23 @@
   height: 23px;
 }
 
+.card:hover .live {
+  opacity: 0;
+}
+
+.live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+
+  display: grid;
+  place-items: center;
+}
+
 .tags {
   margin-top: 1em;
   text-transform: uppercase;
