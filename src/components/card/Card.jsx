@@ -49,7 +49,7 @@ const Card = ({imgURL, name, tags, link}) => {
         <h2>{name}</h2>
       </div>
       <div className={style.live}>
-          <Button>Play Live View</Button>
+          <Button link={link}>Play Live View</Button>
         </div>
     </div>
   )
