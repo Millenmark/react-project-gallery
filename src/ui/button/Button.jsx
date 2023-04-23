@@ -1,6 +1,7 @@
 import React from 'react'
 import { button } from './Button.module.css'
 import { Link } from 'react-router-dom'
+import playBtn from '../../assets/svg/icon_playbtn.svg'
 
 const Button = ({link, type, children, className}) => {
   return (
@@ -8,7 +9,7 @@ const Button = ({link, type, children, className}) => {
       <button 
         className={`${button} ${className}`}
         type={type || 'button'}
-      >{children}</button>
+      >{children} <img src={playBtn} alt="" /></button>
     </Link>
   )
 }

@@ -28,6 +28,10 @@ ul li a {
   color: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .active {
   border-bottom: 2px solid var(--slight-dark-blue-color);
 }
