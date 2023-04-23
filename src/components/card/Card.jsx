@@ -48,7 +48,6 @@ const Card = ({imgURL, name, tags, link}) => {
       <div className={style['card-info']}>
         <h2>{name}</h2>
       </div>
-      <Button link={link} className={style.button}>Visit Live Demo</Button>
     </div>
   )
 }
