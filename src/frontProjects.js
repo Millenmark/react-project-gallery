@@ -10,7 +10,7 @@ export const frontend = [
     "id": "2",
     "name": "age calculator app",
     "img_link": "https://tiftyleb.sirv.com/frontendsolutions/age_calculator_app.jpg",
-    "tags": "html, css, javascript",
+    "tags": "html,css,javascript",
     "live_link": "https://millenmark.github.io/mini-project-age-calculator-app/"
   }
 ]
