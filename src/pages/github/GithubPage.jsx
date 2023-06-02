@@ -1,31 +1,49 @@
-import React from 'react'
-import style from './GithubPage.module.css'
-import { Container, ProjectWrapper } from '../../ui'
-import { Card } from '../../components'
-import { personal } from '../../personalProjects'
+import React from "react";
+import style from "./GithubPage.module.css";
+import { Container, ProjectWrapper } from "../../ui";
+import { Card } from "../../components";
+import { personal } from "../../personalProjects";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const GithubPage = () => {
-  const desc = personal.sort((a, b) => b.id - a.id)
+  const fetchProjects = async () => {
+    const response = await axios.get(
+      "http://localhost:5000/api/projects/personal"
+    );
+    return response.data;
+  };
+
+  const { data, isLoading, isError } = useQuery(
+    ["frontendProjects"],
+    fetchProjects
+  );
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error occurred while fetching projects.</div>;
+  }
+
+  console.log(data);
 
   return (
     <Container className={style.personal}>
       <ProjectWrapper>
-      { 
-        desc.length === 0 
-          ? (<p>Loading... Please wait.</p>)
-          : desc.map((item, index) => (
-            <Card 
-              key={index} 
-              imgURL={item.img_link} 
-              name={item.name} 
-              tags={item.tags}
-              link={item.live_link}
-            />
-          ))
-      }
+        {data.map((item, index) => (
+          <Card
+            key={index}
+            imgURL={item.img_link}
+            name={item.name}
+            tags={item.tags}
+            link={item.live_link}
+          />
+        ))}
       </ProjectWrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default GithubPage
+export default GithubPage;
