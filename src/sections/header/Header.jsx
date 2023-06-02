@@ -40,7 +40,7 @@ const Header = () => {
           <h1>Millen Mark's Project Gallery</h1>
           <div className={style.socials}>
             {icons.map((icon, index) => (
-              <Link to={icon.link} target="_blank">
+              <Link to={icon.link} target="_blank" key={index}>
                 <div className={style.icon}>
                   <img src={icon.logo} alt={`${icon.name} icons`} />
                 </div>
