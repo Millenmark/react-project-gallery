@@ -2,14 +2,13 @@ import React from "react";
 import style from "./GithubPage.module.css";
 import { Container, ProjectWrapper } from "../../ui";
 import { Card } from "../../components";
-import { personal } from "../../personalProjects";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const GithubPage = () => {
   const fetchProjects = async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/projects/personal"
+      `${import.meta.env.VITE_BACKEND}/projects/personal`
     );
     return response.data;
   };

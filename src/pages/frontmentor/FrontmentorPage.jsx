@@ -8,7 +8,7 @@ import axios from "axios";
 const FrontmentorPage = () => {
   const fetchProjects = async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/projects/frontend"
+      `${import.meta.env.VITE_BACKEND}/projects/frontend`
     );
     return response.data;
   };
