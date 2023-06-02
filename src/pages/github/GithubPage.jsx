@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./GithubPage.module.css";
 import { Container, ProjectWrapper } from "../../ui";
-import { Card } from "../../components";
+import { Card, Loader } from "../../components";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
@@ -18,12 +18,12 @@ const GithubPage = () => {
     fetchProjects
   );
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   if (isError) {
-    return <div>Error occurred while fetching projects.</div>;
+    return (
+      <div style={{ textAlign: "center" }}>
+        Error occurred while fetching projects.
+      </div>
+    );
   }
 
   console.log(data);
@@ -31,15 +31,19 @@ const GithubPage = () => {
   return (
     <Container className={style.personal}>
       <ProjectWrapper>
-        {data.map((item, index) => (
-          <Card
-            key={index}
-            imgURL={item.img_link}
-            name={item.name}
-            tags={item.tags}
-            link={item.live_link}
-          />
-        ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          data.map((item, index) => (
+            <Card
+              key={index}
+              imgURL={item.img_link}
+              name={item.name}
+              tags={item.tags}
+              link={item.live_link}
+            />
+          ))
+        )}
       </ProjectWrapper>
     </Container>
   );
