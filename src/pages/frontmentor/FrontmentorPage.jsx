@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./FrontmentorPage.module.css";
 import { Container, ProjectWrapper } from "../../ui";
-import { Card } from "../../components";
+import { Card, Loader } from "../../components";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
@@ -19,7 +19,11 @@ const FrontmentorPage = () => {
   );
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Loader />
+      </>
+    );
   }
 
   if (isError) {
