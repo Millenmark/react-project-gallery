@@ -2,7 +2,7 @@ import style from "./Loader.module.css";
 
 const Loader = () => {
   return (
-    <div className={style.lds - ellipsis}>
+    <div className={style.ldsEllipsis}>
       <div></div>
       <div></div>
       <div></div>

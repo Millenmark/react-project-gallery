@@ -18,30 +18,30 @@ const FrontmentorPage = () => {
     fetchProjects
   );
 
-  if (isLoading) {
-    return (
-      <>
-        <Loader />
-      </>
-    );
-  }
-
   if (isError) {
-    return <div>Error occurred while fetching projects.</div>;
+    return (
+      <div style={{ textAlign: "center" }}>
+        Error occurred while fetching projects.
+      </div>
+    );
   }
 
   return (
     <Container className={style.frontend}>
       <ProjectWrapper>
-        {data.map((item, index) => (
-          <Card
-            key={index}
-            imgURL={item.img_link}
-            name={item.name}
-            tags={item.tags}
-            link={item.live_link}
-          />
-        ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          data.map((item, index) => (
+            <Card
+              key={index}
+              imgURL={item.img_link}
+              name={item.name}
+              tags={item.tags}
+              link={item.live_link}
+            />
+          ))
+        )}
       </ProjectWrapper>
     </Container>
   );
