@@ -20,4 +20,11 @@ export const mentor = [
     tags: "react,tailwind",
     live_link: "https://millen-react-pricing-component.vercel.app/",
   },
+  {
+    name: "social media dashboard",
+    img_link:
+      "https://tiftyleb.sirv.com/frontendsolutions/social_media_dashboard.jpg",
+    tags: "react,tailwind",
+    live_link: "https://millen-social-media-dashboard.netlify.app/",
+  },
 ];
